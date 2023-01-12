@@ -16,4 +16,8 @@ You put your password in, which may be made difficult by the fact you can't see 
 From here you can perform commands. I tried concatenating the Hello.txt file from within the computer I connected to, got the following alongside an error below it
 since I was encouraged to see if I could make an error occur, which for a professional on those was easy.
 
-![Image]
+![Image](concatenationTest.PNG)
+
+And all that was done in lab is completed, aside from the setup of the page where this is in itself. 
+
+Thanks for reading and good evening.
