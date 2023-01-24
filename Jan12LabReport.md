@@ -20,9 +20,9 @@ since I was encouraged to see if I could make an error occur, which for a profes
 ![Image](concatenationTest.png)
 
 Some other commands are:
-- '$cd' Change the working directory.
-- '$ls' To list the files in the current directory (or specify from where after the command)
-- '$ls' -lat' From what my labmates had on the Lab 1 Doc, this shows files in ordered from the most recently modified.
+- `$cd` Change the working directory.
+- `$ls` To list the files in the current directory (or specify from where after the command)
+- `$ls -lat` From what my labmates had on the Lab 1 Doc, this shows files in ordered from the most recently modified.
 
 And all that was done in lab is completed, aside from the setup of the page where this is in itself. 
 
