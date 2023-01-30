@@ -3,50 +3,50 @@ My code for the StringServer assignment is:
 import java.io.IOException;
 import java.net.URI;
 
-  class Handler implements URLHandler {
-      protected int DEFAULT_LENGTH = 100;
-      String[] words = new String[DEFAULT_LENGTH];
-      int size = 0;
-      String wordList = "";
+      class Handler implements URLHandler {
+          protected int DEFAULT_LENGTH = 100;
+          String[] words = new String[DEFAULT_LENGTH];
+          int size = 0;
+          String wordList = "";
 
-      public String handleRequest(URI url) {
-          if (url.getPath().equals("/")) {
-              String con = "Current strings: \n";
+          public String handleRequest(URI url) {
+              if (url.getPath().equals("/")) {
+                  String con = "Current strings: \n";
 
-              if(size != 0){
-                  for(int i = 0; i < size; i++){
-                      con += words[i] + "\n";
+                  if(size != 0){
+                      for(int i = 0; i < size; i++){
+                          con += words[i] + "\n";
+                      }
                   }
+
+                  return con;
+              } else if(url.getPath().equals("/add-message")){
+                  String[] parameters = url.getQuery().split("=");
+                  if(parameters[0].equals("s")){
+                      size++;
+                      words[size-1] = parameters[1];
+                      wordList += parameters[1] + "\n";
+                      return "String added; now strings are:\n" +  wordList;
+                  }
+
+              }
+              return String.format("404 Nothing Found :[");
+              }
+          }
+
+
+      class StringServer {
+          public static void main(String[] args) throws IOException {
+              if(args.length == 0){
+                  System.out.println("Missing port number! Try any number between 1024 to 49151");
+                  return;
               }
 
-              return con;
-          } else if(url.getPath().equals("/add-message")){
-              String[] parameters = url.getQuery().split("=");
-              if(parameters[0].equals("s")){
-                  size++;
-                  words[size-1] = parameters[1];
-                  wordList += parameters[1] + "\n";
-                  return "String added; now strings are:\n" +  wordList;
-              }
+              int port = Integer.parseInt(args[0]);
 
+              Server.start(port, new Handler());
           }
-          return String.format("404 Nothing Found :[");
-          }
-      }
-
-
-  class StringServer {
-      public static void main(String[] args) throws IOException {
-          if(args.length == 0){
-              System.out.println("Missing port number! Try any number between 1024 to 49151");
-              return;
-          }
-
-          int port = Integer.parseInt(args[0]);
-
-          Server.start(port, new Handler());
-      }
-  } 
+      } 
 
 Now, this is pretty hefty, but most of these lines are repurposing of what we used for the NumberServer and SearchEngine, mostly because I am yet to
 still understand what the Server.java file we received does. This program simply adds strings to an array of strings when you type
@@ -74,22 +74,22 @@ changes onto the repository for the last part, luckily I did do it for the first
 code).
 
 The JUnit test I wrote that failed was:
-    @Test 
-    public void testReversed2(){
-      int[] input3 = {3, 4, 21, 2, 10};
-      assertArrayEquals(new int[]{10, 2, 21, 4, 3}, ArrayExamples.reversed(input3));
-    }
+        @Test 
+        public void testReversed2(){
+          int[] input3 = {3, 4, 21, 2, 10};
+          assertArrayEquals(new int[]{10, 2, 21, 4, 3}, ArrayExamples.reversed(input3));
+        }
   
 The error being that we expected 10 to be the first value in the array, but it was sadly 0. Here's a screenshot of that error:
 
 ![Did not Reverse](Screenshot_424.png)
 
 The original tester came with code that did work for the Reversed method it being below:
-    @Test
-    public void testReversed() {
-      int[] input1 = { };
-      assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
-    }
+        @Test
+        public void testReversed() {
+          int[] input1 = { };
+          assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+        }
 
 So an empty array has nothing to reverse, and seems to work fine. This test doesn't really have an output, but it does have a 
 green checkmark next to it in VSCode:
@@ -97,25 +97,25 @@ green checkmark next to it in VSCode:
 ![Success? :o ](Screenshot_425.png)
 
 Now the faulty code was:
-    static int[] reversed(int[] arr) {
-      int[] newArray = new int[arr.length];
-      for(int i = 0; i < arr.length; i += 1) {
-        arr[i] = newArray[arr.length - i - 1];
-      }
-      return arr;
-    }
+        static int[] reversed(int[] arr) {
+          int[] newArray = new int[arr.length];
+          for(int i = 0; i < arr.length; i += 1) {
+            arr[i] = newArray[arr.length - i - 1];
+          }
+          return arr;
+        }
   
 As can be seen the newArray that this method it's meant to return (mentioned in comments above the method not shown here), is not actually returned.
 Instead, we assign all the values of the freshly initialized newArray to the inputted arr, and return arr, which is now filled with nulls/0.
 
 The fix was simple:
-    static int[] reversed(int[] arr) {
-      int[] newArray = new int[arr.length];
-      for(int i = 0; i < arr.length; i += 1) {
-        newArray[i] = arr[arr.length - i - 1];
-      }
-      return newArray;
-    }
+        static int[] reversed(int[] arr) {
+          int[] newArray = new int[arr.length];
+          for(int i = 0; i < arr.length; i += 1) {
+            newArray[i] = arr[arr.length - i - 1];
+          }
+          return newArray;
+        }
   
 Just make sure that the values of arr are assigned properly to the newArray in reverse order and return the newArray variable. Really fun
 thinking experiment, testing and debugging is.
