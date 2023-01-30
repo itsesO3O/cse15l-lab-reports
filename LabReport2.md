@@ -1,7 +1,7 @@
 My code for the StringServer assignment is:
 
-import java.io.IOException;
-import java.net.URI;
+      import java.io.IOException;
+      import java.net.URI;
 
       class Handler implements URLHandler {
           protected int DEFAULT_LENGTH = 100;
@@ -74,6 +74,7 @@ changes onto the repository for the last part, luckily I did do it for the first
 code).
 
 The JUnit test I wrote that failed was:
+      
                     @Test 
                     public void testReversed2(){
                       int[] input3 = {3, 4, 21, 2, 10};
@@ -85,6 +86,7 @@ The error being that we expected 10 to be the first value in the array, but it w
 ![Did not Reverse](Screenshot_424.png)
 
 The original tester came with code that did work for the Reversed method it being below:
+      
                     @Test
                     public void testReversed() {
                       int[] input1 = { };
@@ -97,6 +99,7 @@ green checkmark next to it in VSCode:
 ![Success? :o ](Screenshot_425.png)
 
 Now the faulty code was:
+      
                     static int[] reversed(int[] arr) {
                       int[] newArray = new int[arr.length];
                       for(int i = 0; i < arr.length; i += 1) {
@@ -109,6 +112,7 @@ As can be seen the newArray that this method it's meant to return (mentioned in 
 Instead, we assign all the values of the freshly initialized newArray to the inputted arr, and return arr, which is now filled with nulls/0.
 
 The fix was simple:
+                            
                     static int[] reversed(int[] arr) {
                       int[] newArray = new int[arr.length];
                       for(int i = 0; i < arr.length; i += 1) {
