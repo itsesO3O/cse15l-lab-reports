@@ -67,7 +67,7 @@ in a presentable manner onto the server, I created an empty string, and then I a
 keeps track of how  many strings we have thus far every time we get a succesful path and query pair of add-message?s=. If everything fails, we get an error for
 an undefined path.
 
-####Lab 3
+#### Lab 3
 
 For lab 3 we did some testing and debugging work, and as an example we have the ArrayExamples and ArrayTests. (I apparently had no time during lab to commit
 changes onto the repository for the last part, luckily I did do it for the first example, also I had to clone the original repository to get the faulty
@@ -124,7 +124,8 @@ The fix was simple:
 Just make sure that the values of arr are assigned properly to the newArray in reverse order and return the newArray variable. Really fun
 thinking experiment, testing and debugging is.
 
-####Conclusion
+#### Conclusion
+                            
 In these 2 weeks of labs I found the most interesting out work on the local servers, and the better understanding I have of the URL formats I see daily; I've
 tried to memorize the query for the Never Gonna Give You Up song by Rick Astley, but I still got RickRolled. I liked how the code I worked on in VSCode had an effect
 on my browser. The idea of working with servers is infinitely interesting, but to me it is such a daunting topic I know very little about, I wish to
