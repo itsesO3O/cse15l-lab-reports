@@ -189,8 +189,8 @@ not know may be taking loads of memory, and as ChatGPT showed, also delete them 
 
 Finally I queried one last time to ChatGPT for help with the -type option:
 
-![Last Important Question](Screenshot_445.png)
-![It answers](Screenshot_446.png)
+![Last Important Question](Screenshot_446.png)
+![It answers](Screenshot_447.png)
 
 Using that lead we can confirm that in fact:
 
