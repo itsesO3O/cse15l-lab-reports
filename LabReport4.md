@@ -16,9 +16,11 @@ the next steps.
 ## 3rd
 
 >`cd lab7`
+
 >`<Up>(~x12)<Enter>`
+
 >`<Up>(~x21)<Enter>`
->
+
 I had `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` and 
 `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests`
 right next to each other in my machine history, but I forgot to change into lab7 the first time I ran `javac`, so the amount of times I had to
@@ -26,7 +28,9 @@ go up changed; I tried imagining I'd done the `cd lab7` before all the other com
 
 ## 4th
 >`nano ListExamples.java`
+
 >`<Down>(held)<Up><Up><Up><Up><Up><Up><Up><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Backspace><2>`
+
 >`<Ctrl-o><enter><Ctrl-x>`
 
 I typed in the whole thing for `nano ListExamples.java` and once in I held down the down arrow until I hit the file's bottom, then I performed the
@@ -39,7 +43,9 @@ This time the test compile and run commands where in a much nearer location in m
 
 ## 6th
 >`git add Lis<Tab>.java`
+
 >`git commit -m "c"`
+
 >`git push`
 
 While typing the add command (at first I almost commited before adding, but that's unreported here), I remembered the Tab trick and used it, but
