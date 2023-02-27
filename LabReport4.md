@@ -2,21 +2,21 @@ I started writing the exact steps at around step 4, so some of the ones before a
 count the number of times I did up arrow. So starting from step 1:
 
 ## 1st
-!(一)[Screenshot_453.png]
+!(uno)[Screenshot_453.png]
 >`<Up><Enter>`
 
 I had already accessed the server while setting up, so I just had to do a small seek of my history by up arrow and entering the previously
 entered command.
 
 ## 2nd
-!(二)[Screenshot_454.png]
+!(dos)[Screenshot_454.png]
 >`git clone <Ctrl+v>`
 
 I had the ssh link to the github fork (`git@github.com:itsesO3O/lab7.git`) on my clipboard, so I easily added it and kept on to
 the next steps.
 
 ## 3rd
-!(三)[https://github.com/itsesO3O/cse15l-lab-reports/blob/main/Screenshot_455.png]
+!(tre)[Screenshot_455.png]
 >`cd lab7`
 
 >`<Up>(~x12)<Enter>`
@@ -29,8 +29,8 @@ right next to each other in my machine history, but I forgot to change into lab7
 go up changed; I tried imagining I'd done the `cd lab7` before all the other commands, but my memory of the exact count is tired.
 
 ## 4th
-!(四)[Screenshot_457.png]
-!(四.2)[Screenshot_456.png]
+!(cua)[Screenshot_457.png]
+!(tro)[Screenshot_456.png]
 >`nano ListExamples.java`
 
 >`<Down>(held)<Up><Up><Up><Up><Up><Up><Up><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Backspace><2>`
@@ -41,13 +41,13 @@ I typed in the whole thing for `nano ListExamples.java` and once in I held down 
 second line of commands to get to the error location and change `index1` to `index2`. Saved with the `Ctrl-o` and `enter` and exited with `Ctrl-x`.
 
 ## 5th
-!(五)[Screenshot_459.png]
+!(cin)[Screenshot_459.png]
 >`<Up><Up><Enter>` and `<Up><Up><Up><Enter>`
 
 This time the test compile and run commands where in a much nearer location in my history.
 
 ## 6th
-!(六)[Screenshot_460.png]
+!(sei)[Screenshot_460.png]
 >`git add Lis<Tab>.java`
 
 >`git commit -m "c"`
