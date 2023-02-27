@@ -30,6 +30,7 @@ go up changed; I tried imagining I'd done the `cd lab7` before all the other com
 
 ## 4th
 ![cua](Screenshot_457.png)
+
 ![tro](Screenshot_456.png)
 >`nano ListExamples.java`
 
